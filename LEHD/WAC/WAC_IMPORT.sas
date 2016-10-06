@@ -1,4 +1,4 @@
-%LET LEHD=//Vboxsvr/data/Census/LEHD/;
+%LET LEHD=/Directory/;
 LIBNAME LEHD"&LEHD.";
 
 /* This helps to process all state data iteratively. */
@@ -152,6 +152,6 @@ PROC SQL;
 QUIT;
 
 /* This outputs the data to a .dbf which can be used by both ArcGIS and QGIS. */
-FILENAME JOBS "//VBOXSVR/data/Viz/JOBDENSITY2014/JOBS.DBF";
+FILENAME JOBS "/Directory/JOBDENSITY2014/JOBS.DBF";
 PROC DBF DATA=LEHD.BG14_WAC DB4=JOBS;
 RUN;
